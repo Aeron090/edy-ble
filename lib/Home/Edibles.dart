@@ -25,9 +25,7 @@ class _ediblesscreenState extends State<ediblesscreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(

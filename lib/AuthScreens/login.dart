@@ -9,6 +9,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../Home/bottomnavbar.dart';
+import '../Home/controller.dart';
 import '../widgets/textformfield.dart';
 
 class loginscreen extends StatefulWidget {
@@ -19,6 +21,7 @@ class loginscreen extends StatefulWidget {
 }
 
 class _loginscreenState extends State<loginscreen> {
+  final bottomcontroller = Get.put(BottomController());
   @override
   Widget build(BuildContext context) {
     double res_height = MediaQuery.of(context).size.height;
@@ -26,9 +29,7 @@ class _loginscreenState extends State<loginscreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -97,13 +98,14 @@ class _loginscreenState extends State<loginscreen> {
                   30.verticalSpace,
                   textformfield(
                     containerwidth: 362.w,
-                    hintTextt: "User Name/ Email Address",
+                    labelText: "User Name/ Email Address",
                     prefixIconimage: "assets/images/Icon material-email.png",
                   ),
                   8.verticalSpace,
                   textformfield(
                       containerwidth: 362.w,
-                      hintTextt: "Password",
+                      // hintTextt: "Password",
+                      labelText: "Password",
                       prefixIconimage: "assets/images/awesome-lock.png"),
                   11.verticalSpace,
                   Row(
@@ -126,7 +128,8 @@ class _loginscreenState extends State<loginscreen> {
                   50.verticalSpace,
                   GestureDetector(
                     onTap: () {
-                      Get.to(() => discovery());
+                      bottomcontroller.navBarChange(0);
+                      Get.to(() => navbar());
                     },
                     child: Container(
                       width: 362.w,

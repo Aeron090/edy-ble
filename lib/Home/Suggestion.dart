@@ -7,6 +7,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import 'bottomnavbar.dart';
+import 'controller.dart';
+
 class suggestionfriends extends StatefulWidget {
   const suggestionfriends({super.key});
 
@@ -23,8 +26,7 @@ class _suggestionfriendsState extends State<suggestionfriends> {
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+              "assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -50,7 +52,9 @@ class _suggestionfriendsState extends State<suggestionfriends> {
                 ),
                 child: FloatingActionButton.extended(
                   onPressed: () {
-                    Get.to(() => discovery());
+                    final bottomcontroller = Get.put(BottomController());
+                    bottomcontroller.navBarChange(0);
+                    Get.to(() => navbar());
                   },
                   label: Text(
                     'Skip',

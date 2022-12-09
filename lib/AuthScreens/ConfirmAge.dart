@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:edyble_app/AuthScreens/ConfirmationUser.dart';
 import 'package:edyble_app/AuthScreens/prelogin.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -11,7 +12,9 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 class ConfirmAge extends StatefulWidget {
-  const ConfirmAge({super.key});
+  const ConfirmAge({
+    super.key,
+  });
 
   @override
   State<ConfirmAge> createState() => _ConfirmAgeState();
@@ -26,7 +29,7 @@ class _ConfirmAgeState extends State<ConfirmAge> {
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
-              "assets/images/Group 682.png",
+              "assets/images/backgroundedyble.jpg",
             ),
             fit: BoxFit.fill),
       ),
@@ -75,7 +78,7 @@ class _ConfirmAgeState extends State<ConfirmAge> {
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
-                          Get.to(() => preloginscreen());
+                          Get.to(() => confirmationaboutuser());
                         },
                         child: Container(
                           width: 159.w,

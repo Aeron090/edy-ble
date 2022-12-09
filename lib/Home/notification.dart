@@ -31,9 +31,7 @@ class _drawernotificationState extends State<drawernotification> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -62,178 +60,184 @@ class _drawernotificationState extends State<drawernotification> {
         ),
         body: Container(
           width: double.infinity,
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 5),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              selcted = 1;
-                            });
-                          },
-                          child: Column(
-                            children: [
-                              Text(
-                                'Activities',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontFamily: "Sora, Regular",
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                selcted = 1;
+                              });
+                            },
+                            child: Column(
+                              children: [
+                                Text(
+                                  'Activities',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontFamily: "Sora, Regular",
+                                    color: selcted == 1
+                                        ? Color(0xffB6FF6F)
+                                        : Color(0xffB6FF6F).withOpacity(0.20),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  width: Get.width * 0.30,
                                   color: selcted == 1
                                       ? Color(0xffB6FF6F)
                                       : Color(0xffB6FF6F).withOpacity(0.20),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                width: Get.width * 0.30,
-                                color: selcted == 1
-                                    ? Color(0xffB6FF6F)
-                                    : Color(0xffB6FF6F).withOpacity(0.20),
-                                height: selcted == 1 ? 3 : 1,
-                              )
-                            ],
+                                  height: selcted == 1 ? 3 : 1,
+                                )
+                              ],
+                            ),
                           ),
-                        ),
-                        GestureDetector(
-                          behavior: HitTestBehavior.translucent,
-                          onTap: () {
-                            setState(() {
-                              selcted = 2;
-                            });
-                          },
-                          child: Column(
-                            children: [
-                              Text(
-                                'Shops',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontFamily: "Segoe UI, Semibold",
+                          GestureDetector(
+                            behavior: HitTestBehavior.translucent,
+                            onTap: () {
+                              setState(() {
+                                selcted = 2;
+                              });
+                            },
+                            child: Column(
+                              children: [
+                                Text(
+                                  'Shops',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontFamily: "Segoe UI, Semibold",
+                                    color: selcted == 2
+                                        ? Color(0xffB6FF6F)
+                                        : Color(0xffB6FF6F).withOpacity(0.20),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  width: Get.width * 0.30,
                                   color: selcted == 2
                                       ? Color(0xffB6FF6F)
                                       : Color(0xffB6FF6F).withOpacity(0.20),
+                                  height: creditbool == 2 ? 3 : 1,
                                 ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                width: Get.width * 0.30,
-                                color: selcted == 2
-                                    ? Color(0xffB6FF6F)
-                                    : Color(0xffB6FF6F).withOpacity(0.20),
-                                height: creditbool == 2 ? 3 : 1,
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                        GestureDetector(
-                          behavior: HitTestBehavior.translucent,
-                          onTap: () {
-                            setState(() {
-                              selcted = 3;
-                            });
-                          },
-                          child: Column(
-                            children: [
-                              Text(
-                                'News',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontFamily: "Segoe UI, Semibold",
+                          GestureDetector(
+                            behavior: HitTestBehavior.translucent,
+                            onTap: () {
+                              setState(() {
+                                selcted = 3;
+                              });
+                            },
+                            child: Column(
+                              children: [
+                                Text(
+                                  'News',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontFamily: "Segoe UI, Semibold",
+                                    color: selcted == 3
+                                        ? Color(0xffB6FF6F)
+                                        : Color(0xffB6FF6F).withOpacity(0.20),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  width: Get.width * 0.30,
                                   color: selcted == 3
                                       ? Color(0xffB6FF6F)
                                       : Color(0xffB6FF6F).withOpacity(0.20),
+                                  height: selcted == 3 ? 3 : 1,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      selcted == 1
+                          ? Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 5),
+                              child: Container(
+                                width: double.infinity,
+                                height: 0.9.sh,
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      child: ListView.builder(
+                                        itemCount: 10,
+                                        itemBuilder: (context, i) {
+                                          return Activitieswidget();
+                                        },
+                                      ),
+                                    ),
+                                    100.verticalSpace,
+                                  ],
                                 ),
                               ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Container(
-                                width: Get.width * 0.30,
-                                color: selcted == 3
-                                    ? Color(0xffB6FF6F)
-                                    : Color(0xffB6FF6F).withOpacity(0.20),
-                                height: selcted == 3 ? 3 : 1,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    selcted == 1
-                        ? Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 5),
-                            child: Container(
-                              width: double.infinity,
-                              height: 0.8.sh,
-                              child: Column(
-                                children: [
-                                  Expanded(
-                                    child: ListView.builder(
-                                      itemCount: 10,
-                                      itemBuilder: (context, i) {
-                                        return Activitieswidget();
-                                      },
+                            )
+                          : selcted == 2
+                              ? Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(horizontal: 7),
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 0.9.sh,
+                                    child: Column(
+                                      children: [
+                                        Expanded(
+                                          child: ListView.builder(
+                                            itemCount: 10,
+                                            itemBuilder: (context, i) {
+                                              return shopwidget();
+                                            },
+                                          ),
+                                        ),
+                                        100.verticalSpace,
+                                      ],
                                     ),
                                   ),
-                                ],
-                              ),
-                            ),
-                          )
-                        : selcted == 2
-                            ? Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 7),
-                                child: Container(
-                                  width: double.infinity,
-                                  height: 0.8.sh,
-                                  child: Column(
-                                    children: [
-                                      Expanded(
-                                        child: ListView.builder(
-                                          itemCount: 10,
-                                          itemBuilder: (context, i) {
-                                            return shopwidget();
-                                          },
+                                )
+                              : Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(horizontal: 7),
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 0.9.sh,
+                                    child: Column(
+                                      children: [
+                                        Expanded(
+                                          child: ListView.builder(
+                                            itemCount: 10,
+                                            itemBuilder: (context, i) {
+                                              return shopwidget();
+                                            },
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                        150.verticalSpace,
+                                      ],
+                                    ),
                                   ),
                                 ),
-                              )
-                            : Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 7),
-                                child: Container(
-                                  width: double.infinity,
-                                  height: 0.8.sh,
-                                  child: Column(
-                                    children: [
-                                      Expanded(
-                                        child: ListView.builder(
-                                          itemCount: 10,
-                                          itemBuilder: (context, i) {
-                                            return shopwidget();
-                                          },
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

@@ -26,8 +26,7 @@ class _ratingscreenState extends State<ratingscreen> {
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+              "assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(

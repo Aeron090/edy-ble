@@ -33,9 +33,7 @@ class _discoveryState extends State<discovery> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -50,29 +48,32 @@ class _discoveryState extends State<discovery> {
             onTap: () {
               _key.currentState!.openDrawer();
             },
-            child: Container(
-              width: 57.w,
-              height: 57.h,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Color(0xffB6FF6F),
-                ),
-                boxShadow: [
-                  BoxShadow(
+            child: Padding(
+              padding: EdgeInsets.only(left: 15),
+              child: Container(
+                width: 57.w,
+                height: 57.h,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  shape: BoxShape.circle,
+                  border: Border.all(
                     color: Color(0xffB6FF6F),
-                    spreadRadius: 0,
-                    blurRadius: 1,
-                    offset: Offset(0, 1), // changes position of shadow
                   ),
-                ],
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0xffB6FF6F),
+                      spreadRadius: 0,
+                      blurRadius: 1,
+                      offset: Offset(0, 1), // changes position of shadow
+                    ),
+                  ],
+                ),
+                child: Center(
+                    child: Image.asset(
+                  "assets/images/Icon feather-menu.png",
+                  scale: 3.5,
+                )),
               ),
-              child: Center(
-                  child: Image.asset(
-                "assets/images/Icon feather-menu.png",
-                scale: 3.5,
-              )),
             ),
           ),
           title: Text(
@@ -334,7 +335,7 @@ class _discoveryState extends State<discovery> {
                           ),
                           10.verticalSpace,
                           horizontalscrollablerow(),
-                          50.verticalSpace,
+                          250.verticalSpace,
                         ],
                       ),
                     ),

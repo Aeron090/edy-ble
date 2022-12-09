@@ -24,8 +24,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+              "assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -76,7 +75,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     ]),
                     30.verticalSpace,
                     textformfield(
-                        hintTextt: "Email",
+                        labelText: "Email",
                         prefixIconimage:
                             "assets/images/Icon material-email.png",
                         containerwidth: 362.w),

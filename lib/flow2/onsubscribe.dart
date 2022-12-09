@@ -1,3 +1,4 @@
+import 'package:edyble_app/Home/bottomnavbar.dart';
 import 'package:edyble_app/flow2/shophome.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -111,7 +112,7 @@ class _onsubscribescreenState extends State<onsubscribescreen> {
               400.verticalSpace,
               GestureDetector(
                 onTap: () {
-                  Get.to(() => shophome());
+                  Get.to(() => navbar());
                 },
                 child: Container(
                   width: 388.w,

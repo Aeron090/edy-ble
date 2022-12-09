@@ -24,9 +24,7 @@ class _createprofileState extends State<createprofile> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -57,206 +55,242 @@ class _createprofileState extends State<createprofile> {
         ),
         body: Container(
           width: double.infinity,
-          child: Column(
-            children: [
-              Stack(
-                children: [
-                  Image.asset(
-                    "assets/images/createprofileEllipse 2.png",
-                    scale: 4,
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    left: 68,
-                    child: Container(
-                      width: 40.w,
-                      height: 40.h,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Container(
+                      width: 143.w,
+                      height: 143.h,
                       decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Color(0xffB6FF6F)),
-                      child: Center(
-                        child: Image.asset(
-                          "assets/images/Icon-camera.png",
-                          scale: 3.8,
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          width: 1.w,
+                          color: Color(0xffB6FF6F),
+                        ),
+                        color: Colors.black,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0xffB6FF6F),
+                            spreadRadius: 0,
+                            blurRadius: 10,
+                            offset: Offset(0, 0), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child: Image.asset(
+                        "assets/images/Ellipse 41.png",
+                      ),
+                    ),
+                    Positioned(
+                      bottom: -20,
+                      left: 50,
+                      child: Container(
+                        width: 40.w,
+                        height: 40.h,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle, color: Color(0xffB6FF6F)),
+                        child: Center(
+                          child: Image.asset(
+                            "assets/images/Icon-camera.png",
+                            scale: 3.8,
+                          ),
                         ),
                       ),
                     ),
+                  ],
+                ),
+                42.verticalSpace,
+                createprofiletextfield("Full Name"),
+                9.verticalSpace,
+                Container(
+                  width: 362.w,
+                  height: 62.h,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(31.r),
+                    border: Border.all(width: 2.w, color: Color(0xffB6FF6F)),
+                    color: Colors.white.withOpacity(0.4),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xffB6FF6F).withOpacity(0.05),
+                        spreadRadius: 0,
+                        blurRadius: 7,
+                        offset: Offset(0, 1), // changes position of shadow
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              42.verticalSpace,
-              createprofiletextfield("Full Name"),
-              9.verticalSpace,
-              Container(
-                width: 362.w,
-                height: 62.h,
-                // decoration: BoxDecoration(
-                //   color: Color(0xff677369),
-                //   border: Border.all(
-                //     width: 0,
-                //   ),
-                //   borderRadius: BorderRadius.circular(31.r),
-                //   boxShadow: [
-                //     BoxShadow(
-                //       color: Color(0xffB6FF6F),
-                //       spreadRadius: 0,
-                //       blurRadius: 7,
-                //       offset: Offset(0, 1), // changes position of shadow
-                //     ),
-                //   ],
-                // ),
-                child: TextFormField(
-                  style: TextStyle(
-                    fontSize: 18.sp,
-                    color: Colors.grey.withOpacity(0.75),
-                  ),
-                  keyboardType: TextInputType.text,
-                  decoration: InputDecoration(
+                  // decoration: BoxDecoration(
+                  //   color: Color(0xff677369),
+                  //   border: Border.all(
+                  //     width: 0,
+                  //   ),
+                  //   borderRadius: BorderRadius.circular(31.r),
+                  //   boxShadow: [
+                  //     BoxShadow(
+                  //       color: Color(0xffB6FF6F),
+                  //       spreadRadius: 0,
+                  //       blurRadius: 7,
+                  //       offset: Offset(0, 1), // changes position of shadow
+                  //     ),
+                  //   ],
+                  // ),
+                  child: TextFormField(
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      color: Colors.white,
+                    ),
+                    keyboardType: TextInputType.text,
+                    decoration: InputDecoration(
                       suffixIcon: Image.asset(
                         "assets/images/material-my-location.png",
                         scale: 4.5,
                       ),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            width: 2.w,
-                            color: Color(0xffB6FF6F),
-                          ),
-                          borderRadius: BorderRadius.circular(31.r)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(31.r),
-                          borderSide:
-                              BorderSide(color: Color(0xffB6FF6F), width: 2.w)),
-                      hintText: "Location",
+                      // focusedBorder: OutlineInputBorder(
+                      //     borderSide: BorderSide(
+                      //       width: 2.w,
+                      //       color: Color(0xffB6FF6F),
+                      //     ),
+                      //     borderRadius: BorderRadius.circular(31.r)),
+                      // enabledBorder: OutlineInputBorder(
+                      //     borderRadius: BorderRadius.circular(31.r),
+                      //     borderSide: BorderSide(
+                      //         color: Color(0xffB6FF6F), width: 2.w)),
+                      labelText: "Location",
                       contentPadding: const EdgeInsets.symmetric(
-                          vertical: 18.0, horizontal: 30.0),
-                      hintStyle: TextStyle(
+                          vertical: 5, horizontal: 30.0),
+                      labelStyle: TextStyle(
                           fontSize: 18.sp,
-                          color: Colors.grey.withOpacity(0.75),
+                          color: Colors.white,
                           fontFamily: "Sora Thin"),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(31.r),
-                        borderSide: BorderSide(
-                          width: 1.w,
-                          style: BorderStyle.none,
-                        ),
+                      // border: OutlineInputBorder(
+                      //   borderRadius: BorderRadius.circular(31.r),
+                      //   borderSide: BorderSide(
+                      //     width: 1.w,
+                      //     style: BorderStyle.none,
+                      //   ),
+                      // ),
+                      // filled: true,
+                      // fillColor: Color(0xff687a6c).withOpacity(0.5),
+                    ),
+                  ),
+                ),
+                9.verticalSpace,
+                createprofiletextfield("Username"),
+                23.verticalSpace,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Row(
+                    children: [
+                      Checkbox(
+                          focusColor: Color(0xffB6FF6F),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5.r),
+                          ),
+                          side: BorderSide(color: Color(0xffB6FF6F)),
+                          checkColor: Color(0xffB6FF6F),
+                          // fillColor: MaterialStateProperty
+                          //     .resolveWith(getColor),
+                          // focusColor: Colors.transparent,
+                          activeColor: Color(0xff677369),
+                          value: isChecked,
+                          onChanged: (bool? value) {
+                            setState(() {
+                              isChecked = value!;
+                            });
+                          }),
+                      Text(
+                        "Username",
+                        style: TextStyle(fontSize: 15.sp, color: Colors.white),
                       ),
-                      filled: true,
-                      fillColor: Color(0xff687a6c).withOpacity(0.5)),
-                ),
-              ),
-              9.verticalSpace,
-              createprofiletextfield("Username"),
-              23.verticalSpace,
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  children: [
-                    Checkbox(
-                        focusColor: Color(0xffB6FF6F),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5.r),
-                        ),
-                        side: BorderSide(color: Color(0xffB6FF6F)),
-                        checkColor: Color(0xffB6FF6F),
-                        // fillColor: MaterialStateProperty
-                        //     .resolveWith(getColor),
-                        // focusColor: Colors.transparent,
-                        activeColor: Color(0xff677369),
-                        value: isChecked,
-                        onChanged: (bool? value) {
-                          setState(() {
-                            isChecked = value!;
-                          });
-                        }),
-                    Text(
-                      "Username",
-                      style: TextStyle(fontSize: 15.sp, color: Colors.white),
-                    ),
-                    Checkbox(
-                        focusColor: Color(0xffB6FF6F),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5.r),
-                        ),
-                        side: BorderSide(color: Color(0xffB6FF6F)),
-                        checkColor: Color(0xffB6FF6F),
-                        // fillColor: MaterialStateProperty
-                        //     .resolveWith(getColor),
-                        // focusColor: Colors.transparent,
-                        activeColor: Color(0xff677369),
-                        value: isChecked1,
-                        onChanged: (bool? value) {
-                          setState(() {
-                            isChecked1 = value!;
-                          });
-                        }),
-                    Text(
-                      "Username",
-                      style: TextStyle(fontSize: 15.sp, color: Colors.white),
-                    ),
-                  ],
-                ),
-              ),
-              27.verticalSpace,
-              GestureDetector(
-                onTap: () {
-                  Get.to(() => createprofilecontinue());
-                },
-                child: Container(
-                  width: 362.w,
-                  height: 62.h,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 3,
-                      color: Color(0xffB6FF6F),
-                    ),
-                    borderRadius: BorderRadius.circular(31.r),
-                    color: Color(0xffB6FF6F),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0xff00FFA3),
-                        spreadRadius: 0,
-                        blurRadius: 13,
-                        offset: Offset(0, 0), // changes position of shadow
+                      Checkbox(
+                          focusColor: Color(0xffB6FF6F),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5.r),
+                          ),
+                          side: BorderSide(color: Color(0xffB6FF6F)),
+                          checkColor: Color(0xffB6FF6F),
+                          // fillColor: MaterialStateProperty
+                          //     .resolveWith(getColor),
+                          // focusColor: Colors.transparent,
+                          activeColor: Color(0xff677369),
+                          value: isChecked1,
+                          onChanged: (bool? value) {
+                            setState(() {
+                              isChecked1 = value!;
+                            });
+                          }),
+                      Text(
+                        "Username",
+                        style: TextStyle(fontSize: 15.sp, color: Colors.white),
                       ),
                     ],
                   ),
-                  child: Center(
-                    child: Text(
-                      "Create Profile",
-                      style: TextStyle(
-                          fontSize: 20.sp,
-                          fontFamily: "Sora, ExtraBold",
-                          fontWeight: FontWeight.bold),
+                ),
+                27.verticalSpace,
+                GestureDetector(
+                  onTap: () {
+                    Get.to(() => createprofilecontinue());
+                  },
+                  child: Container(
+                    width: 362.w,
+                    height: 62.h,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 3,
+                        color: Color(0xffB6FF6F),
+                      ),
+                      borderRadius: BorderRadius.circular(31.r),
+                      color: Color(0xffB6FF6F),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0xff00FFA3),
+                          spreadRadius: 0,
+                          blurRadius: 13,
+                          offset: Offset(0, 0), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Create Profile",
+                        style: TextStyle(
+                            fontSize: 20.sp,
+                            fontFamily: "Sora, ExtraBold",
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              // Container(
-              //   width: 362.w,
-              //   height: 62.h,
-              //   decoration: BoxDecoration(
-              //     // gradient: kprimary,
-              //     boxShadow: [
-              //       BoxShadow(
-              //         color: Colors.grey.withOpacity(0.5),
-              //         offset: Offset(0, 0),
-              //       ),
-              //     ],
-              //     border: Border.all(color: Color(0xffB6FF6F), width: 2.sp),
-              //     borderRadius: BorderRadius.circular(50.r),
-              //   ),
-              //   child: TextFormField(
-              //     decoration: InputDecoration(
-              //       hintText: "Email Address",
-              //       hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
-              //       prefixIcon: Icon(
-              //         Icons.email,
-              //         color: Colors.white,
-              //       ),
-              //       border: InputBorder.none,
-              //     ),
-              //   ),
-              // ),
-            ],
+                // Container(
+                //   width: 362.w,
+                //   height: 62.h,
+                //   decoration: BoxDecoration(
+                //     // gradient: kprimary,
+                //     boxShadow: [
+                //       BoxShadow(
+                //         color: Colors.grey.withOpacity(0.5),
+                //         offset: Offset(0, 0),
+                //       ),
+                //     ],
+                //     border: Border.all(color: Color(0xffB6FF6F), width: 2.sp),
+                //     borderRadius: BorderRadius.circular(50.r),
+                //   ),
+                //   child: TextFormField(
+                //     decoration: InputDecoration(
+                //       hintText: "Email Address",
+                //       hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
+                //       prefixIcon: Icon(
+                //         Icons.email,
+                //         color: Colors.white,
+                //       ),
+                //       border: InputBorder.none,
+                //     ),
+                //   ),
+                // ),
+              ],
+            ),
           ),
         ),
       ),
@@ -269,6 +303,19 @@ class _createprofileState extends State<createprofile> {
     return Container(
       width: 362.w,
       height: 62.h,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(31.r),
+        border: Border.all(width: 2.w, color: Color(0xffB6FF6F)),
+        color: Colors.white.withOpacity(0.4),
+        boxShadow: [
+          BoxShadow(
+            color: Color(0xffB6FF6F).withOpacity(0.05),
+            spreadRadius: 0,
+            blurRadius: 7,
+            offset: Offset(0, 1), // changes position of shadow
+          ),
+        ],
+      ),
       // decoration: BoxDecoration(
       //   color: Color(0xff677369),
       //   border: Border.all(
@@ -287,35 +334,39 @@ class _createprofileState extends State<createprofile> {
       child: TextFormField(
         style: TextStyle(
           fontSize: 18.sp,
-          color: Colors.grey.withOpacity(0.75),
+          color: Colors.white,
         ),
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  width: 2.w,
-                  color: Color(0xffB6FF6F),
-                ),
-                borderRadius: BorderRadius.circular(31.r)),
-            enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(31.r),
-                borderSide: BorderSide(color: Color(0xffB6FF6F), width: 2.w)),
-            hintText: txt,
-            contentPadding:
-                const EdgeInsets.symmetric(vertical: 18.0, horizontal: 30.0),
-            hintStyle: TextStyle(
-                fontSize: 18.sp,
-                color: Colors.grey.withOpacity(0.75),
-                fontFamily: "Sora Thin"),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(31.r),
-              borderSide: BorderSide(
-                width: 1.w,
-                style: BorderStyle.none,
-              ),
-            ),
-            filled: true,
-            fillColor: Color(0xff687a6c).withOpacity(0.5)),
+          disabledBorder: InputBorder.none,
+          errorBorder: InputBorder.none,
+          border: InputBorder.none,
+          // decoration: InputDecoration(
+          // focusedBorder: OutlineInputBorder(
+          //     borderSide: BorderSide(
+          //       width: 2.w,
+          //       color: Color(0xffB6FF6F),
+          //     ),
+          //     borderRadius: BorderRadius.circular(31.r)),
+          // enabledBorder: OutlineInputBorder(
+          //     borderRadius: BorderRadius.circular(31.r),
+          //     borderSide: BorderSide(color: Color(0xffB6FF6F), width: 2.w)
+
+          labelText: txt,
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 5, horizontal: 30.0),
+          labelStyle: TextStyle(
+              fontSize: 18.sp, color: Colors.white, fontFamily: "Sora Thin"),
+          // border: OutlineInputBorder(
+          //   borderRadius: BorderRadius.circular(31.r),
+          //   borderSide: BorderSide(
+          //     width: 1.w,
+          //     style: BorderStyle.none,
+          //   ),
+          // ),
+          // filled: true,
+          // fillColor: Color(0xff687a6c).withOpacity(0.5)
+        ),
       ),
     );
   }

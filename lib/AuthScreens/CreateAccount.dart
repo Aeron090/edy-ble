@@ -1,4 +1,5 @@
 import 'package:edyble_app/AuthScreens/ConfirmationUser.dart';
+import 'package:edyble_app/AuthScreens/createprofilecontinue.dart';
 import 'package:edyble_app/AuthScreens/login.dart';
 import 'package:edyble_app/widgets/textformfield.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,6 +9,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+
+import '../Home/Createprofile.dart';
 
 class createaccount extends StatefulWidget {
   const createaccount({super.key});
@@ -24,9 +27,7 @@ class _createaccountState extends State<createaccount> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -92,12 +93,12 @@ class _createaccountState extends State<createaccount> {
                     ]),
                     30.verticalSpace,
                     textformfield(
-                        hintTextt: "Name",
+                        labelText: "Name",
                         prefixIconimage: "assets/images/awesome-user-alt.png",
                         containerwidth: 362.w),
                     7.verticalSpace,
                     textformfield(
-                        hintTextt: "Email",
+                        labelText: "Email",
                         prefixIconimage:
                             "assets/images/Icon material-email.png",
                         containerwidth: 362.w),
@@ -106,17 +107,17 @@ class _createaccountState extends State<createaccount> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         textformfield(
-                            hintTextt: "Day",
+                            labelText: "Day",
                             prefixIconimage:
                                 "assets/images/awesome-calendar-alt.png",
                             containerwidth: 115.w),
                         textformfield(
-                            hintTextt: "Month",
+                            labelText: "Month",
                             prefixIconimage:
                                 "assets/images/awesome-calendar-alt.png",
                             containerwidth: 115.w),
                         textformfield(
-                            hintTextt: "Year",
+                            labelText: "Year",
                             prefixIconimage:
                                 "assets/images/awesome-calendar-alt.png",
                             containerwidth: 115.w),
@@ -124,18 +125,18 @@ class _createaccountState extends State<createaccount> {
                     ),
                     7.verticalSpace,
                     textformfield(
-                        hintTextt: "Password",
+                        labelText: "Password",
                         prefixIconimage: "assets/images/Icon awesome-lock.png",
                         containerwidth: 362.w),
                     7.verticalSpace,
                     textformfield(
-                        hintTextt: "Re-type Password",
+                        labelText: "Re-type Password",
                         prefixIconimage: "assets/images/Icon awesome-lock.png",
                         containerwidth: 362.w),
                     14.verticalSpace,
                     GestureDetector(
                       onTap: () {
-                        Get.to(() => confirmationaboutuser());
+                        Get.to(() => createprofile());
                       },
                       child: Container(
                         width: 362.w,

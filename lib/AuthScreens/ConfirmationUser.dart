@@ -1,6 +1,9 @@
 import 'dart:ui';
 
+import 'package:edyble_app/AuthScreens/prelogin.dart';
 import 'package:edyble_app/Home/Createprofile.dart';
+import 'package:edyble_app/flow2/createshopprofile.dart';
+import 'package:edyble_app/global/Global.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -25,7 +28,7 @@ class _confirmationaboutuserState extends State<confirmationaboutuser> {
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
-              "assets/images/Group 682.png",
+              "assets/images/backgroundedyble.jpg",
             ),
             fit: BoxFit.fill),
       ),
@@ -85,39 +88,54 @@ class _confirmationaboutuserState extends State<confirmationaboutuser> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    width: 159.w,
-                    height: 62.h,
-                    decoration: BoxDecoration(
-                      color: Color(0xff5f8771),
-                      border: Border.all(
-                        width: 2,
-                        color: Color(0xffB6FF6F),
-                      ),
-                      borderRadius: BorderRadius.circular(31.r),
-                      boxShadow: [
-                        BoxShadow(
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        isUser = "yes";
+                      });
+
+                      isUser == "yes"
+                          ? Get.to(() => createshopprofile())
+                          : Get.to(() => createprofile());
+                    },
+                    child: Container(
+                      width: 159.w,
+                      height: 62.h,
+                      decoration: BoxDecoration(
+                        color: Color(0xff5f8771),
+                        border: Border.all(
+                          width: 2,
                           color: Color(0xffB6FF6F),
-                          spreadRadius: 0,
-                          blurRadius: 7,
-                          offset: Offset(0, 1), // changes position of shadow
                         ),
-                      ],
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Yes",
-                        style: TextStyle(
-                            fontSize: 20.sp,
-                            color: Colors.white,
-                            fontStyle: FontStyle.normal),
+                        borderRadius: BorderRadius.circular(31.r),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0xffB6FF6F),
+                            spreadRadius: 0,
+                            blurRadius: 7,
+                            offset: Offset(0, 1), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Yes",
+                          style: TextStyle(
+                              fontSize: 20.sp,
+                              color: Colors.white,
+                              fontStyle: FontStyle.normal),
+                        ),
                       ),
                     ),
                   ),
                   10.horizontalSpace,
                   GestureDetector(
                     onTap: () {
-                      Get.to(() => createprofile());
+                      setState(() {
+                        isUser = "no";
+                      });
+
+                      isUser == "no" ? Get.to(() => preloginscreen()) : null;
                     },
                     child: Container(
                       width: 159.w,

@@ -26,9 +26,7 @@ class _myprofilescreenState extends State<myprofilescreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -148,10 +146,10 @@ class _myprofilescreenState extends State<myprofilescreen> {
                       disabledBorder: InputBorder.none,
                       errorBorder: InputBorder.none,
                       border: InputBorder.none,
-                      hintText: "Location",
+                      labelText: "Location",
                       contentPadding: const EdgeInsets.symmetric(
-                          vertical: 18.0, horizontal: 30.0),
-                      hintStyle: TextStyle(
+                          vertical: 5, horizontal: 30.0),
+                      labelStyle: TextStyle(
                           fontSize: 18.sp,
                           color: Colors.white,
                           fontFamily: "Sora Thin"),
@@ -231,10 +229,10 @@ class _myprofilescreenState extends State<myprofilescreen> {
             disabledBorder: InputBorder.none,
             errorBorder: InputBorder.none,
             border: InputBorder.none,
-            hintText: txt,
+            labelText: txt,
             contentPadding:
-                const EdgeInsets.symmetric(vertical: 18.0, horizontal: 30.0),
-            hintStyle: TextStyle(
+                const EdgeInsets.symmetric(vertical: 5, horizontal: 30.0),
+            labelStyle: TextStyle(
                 fontSize: 18.sp, color: Colors.white, fontFamily: "Sora Thin"),
             fillColor: Color(0xff687a6c).withOpacity(0.5)),
       ),

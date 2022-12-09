@@ -23,8 +23,7 @@ class _subscribeState extends State<subscribe> {
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+              "assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -156,6 +155,7 @@ class _subscribeState extends State<subscribe> {
                   bottom: -25,
                   left: 12,
                   child: GestureDetector(
+                    behavior: HitTestBehavior.translucent,
                     onTap: () {
                       Get.to(() => onsubscribescreen());
                     },

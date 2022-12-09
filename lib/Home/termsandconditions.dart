@@ -24,8 +24,7 @@ class _termsandconditionsState extends State<termsandconditions> {
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+              "assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -37,7 +36,7 @@ class _termsandconditionsState extends State<termsandconditions> {
           toolbarHeight: 100.h,
           leading: GestureDetector(
             onTap: () {
-              Get.to(() => settings());
+              Get.back();
             },
             child: Image.asset(
               "assets/images/Icon ionic-ios-arrow-back.png",

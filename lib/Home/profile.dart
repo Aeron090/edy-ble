@@ -32,9 +32,7 @@ class _profilescreenState extends State<profilescreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/Group 682.png",
-            ),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -240,6 +238,12 @@ class _profilescreenState extends State<profilescreen> {
                     color: Color(0xff0B9771),
                   ),
                   Activityfeedwidget(),
+                  Container(
+                    width: 389.w,
+                    height: 1,
+                    color: Color(0xff0B9771),
+                  ),
+                  200.verticalSpace
                 ],
               ),
             ),

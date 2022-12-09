@@ -1,12 +1,18 @@
 import 'package:edyble_app/AuthScreens/ConfirmAge.dart';
+import 'package:edyble_app/Home/map22.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 
+import 'Home/Map.dart';
 import 'Home/bottomnavbar.dart';
 import 'Home/profile.dart';
+import 'comments.dart';
 import 'flow2/createshopprofile.dart';
+import 'flow2/draweradson.dart';
+import 'flow2/drawersubscription.dart';
+import 'flow2/updateshopprofile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,15 +33,43 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               debugShowCheckedModeBanner: false,
-              initialRoute: "/createshopprofile",
+              initialRoute: "/ConfirmAge",
               getPages: [
+                GetPage(
+                  name: "/Mapscreen",
+                  page: () => Mapscreen(),
+                ),
+                GetPage(
+                  name: "/ConfirmAge",
+                  page: () => ConfirmAge(),
+                ),
+                GetPage(
+                  name: "/commentsscreen",
+                  page: () => commentsscreen(),
+                ),
+                GetPage(
+                  name: "/draweraddson",
+                  page: () => draweraddson(),
+                ),
+                GetPage(
+                  name: "/subscriptionscreendrawer",
+                  page: () => subscriptionscreendrawer(),
+                ),
+                GetPage(
+                  name: "/updateshopprofile",
+                  page: () => updateshopprofile(),
+                ),
+                GetPage(
+                  name: "/navbar",
+                  page: () => navbar(),
+                ),
                 GetPage(
                   name: "/createshopprofile",
                   page: () => createshopprofile(),
                 ),
                 GetPage(
-                  name: "/navbar",
-                  page: () => navbar(),
+                  name: "/MapSScreen",
+                  page: () => MapSScreen(),
                 ),
               ]);
         });
