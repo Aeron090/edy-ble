@@ -38,7 +38,9 @@ class _pushnotificationState extends State<pushnotification> {
           automaticallyImplyLeading: false,
           toolbarHeight: 100.h,
           leading: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Get.back();
+            },
             child: Image.asset(
               "assets/images/Icon ionic-ios-arrow-back.png",
               scale: 3.5,

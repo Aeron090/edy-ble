@@ -113,6 +113,10 @@ class _discoveryState extends State<discovery> {
                           ],
                         ),
                         child: TextFormField(
+                          style: TextStyle(
+                            fontSize: 14.sp,
+                            color: Colors.white.withOpacity(0.5),
+                          ),
                           decoration: InputDecoration(
                             hintText: "Search here",
                             contentPadding: const EdgeInsets.symmetric(

@@ -28,8 +28,7 @@ class _shopreviewState extends State<shopreview> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/backgroundedyble.jpg"),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -179,7 +178,7 @@ class _shopreviewState extends State<shopreview> {
                                     35.verticalSpace,
                                     Container(
                                       width: double.infinity,
-                                      height: 0.7.sh,
+                                      height: 0.9.sh,
                                       child: Column(
                                         children: [
                                           Expanded(
@@ -195,6 +194,7 @@ class _shopreviewState extends State<shopreview> {
                                               },
                                             ),
                                           ),
+                                          270.verticalSpace,
                                         ],
                                       ),
                                     ),
@@ -282,12 +282,12 @@ class _shopreviewState extends State<shopreview> {
                                     25.verticalSpace,
                                     Container(
                                       width: double.infinity,
-                                      height: 0.7.sh,
+                                      height: 0.8.sh,
                                       child: Column(
                                         children: [
                                           Expanded(
                                             child: ListView.builder(
-                                              itemCount: 10,
+                                              itemCount: 5,
                                               itemBuilder: (context, i) {
                                                 return shopreviewwidget(
                                                   OnTap: () {
@@ -298,6 +298,7 @@ class _shopreviewState extends State<shopreview> {
                                               },
                                             ),
                                           ),
+                                          150.verticalSpace,
                                         ],
                                       ),
                                     ),

@@ -488,11 +488,10 @@ class _MapSScreenState extends State<MapSScreen> {
                               )
                             ],
                           ),
-                          10.verticalSpace,
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

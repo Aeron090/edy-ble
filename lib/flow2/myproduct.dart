@@ -35,8 +35,7 @@ class _myproductState extends State<myproduct> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/backgroundedyble.jpg"),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -148,7 +147,7 @@ class _myproductState extends State<myproduct> {
                   40.verticalSpace,
                   Container(
                     width: double.infinity,
-                    height: 0.7.sh,
+                    height: 0.9.sh,
                     child: Column(
                       children: [
                         Expanded(
@@ -161,6 +160,7 @@ class _myproductState extends State<myproduct> {
                             },
                           ),
                         ),
+                        300.verticalSpace,
                       ],
                     ),
                   ),
@@ -184,84 +184,88 @@ class myproductswidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 25),
       child: Column(
         children: [
-          10.verticalSpace,
-          Row(
+          Column(
             children: [
-              Container(
-                width: 73.w,
-                height: 73.h,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(
-                    width: 1.w,
-                    color: Color(0xffB6FF6F),
-                  ),
-                  color: Colors.black,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0xffB6FF6F),
-                      spreadRadius: 0,
-                      blurRadius: 10,
-                      offset: Offset(0, 1), // changes position of shadow
-                    ),
-                  ],
-                ),
-                child: Image.asset(
-                  "assets/images/Ellipse 41.png",
-                ),
-              ),
-              10.horizontalSpace,
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
+              10.verticalSpace,
+              Row(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                  Container(
+                    width: 73.w,
+                    height: 73.h,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        width: 1.w,
+                        color: Color(0xffB6FF6F),
+                      ),
+                      color: Colors.black,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0xffB6FF6F),
+                          spreadRadius: 0,
+                          blurRadius: 10,
+                          offset: Offset(0, 1), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: Image.asset(
+                      "assets/images/Ellipse 41.png",
+                    ),
+                  ),
+                  10.horizontalSpace,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        text,
-                        style: TextStyle(
-                            fontSize: 20.sp,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            text,
+                            style: TextStyle(
+                                fontSize: 20.sp,
+                                color: Colors.white,
+                                fontFamily: "Segoe UI, Bold"),
+                          ),
+                          5.horizontalSpace,
+                          Text(
+                            "4.5",
+                            style: TextStyle(
+                                fontSize: 10.sp,
+                                color: Colors.white,
+                                fontFamily: "Segoe UI, Bold"),
+                          ),
+                          5.horizontalSpace,
+                          Icon(
+                            Icons.star,
                             color: Colors.white,
-                            fontFamily: "Segoe UI, Bold"),
+                            size: 10,
+                          ),
+                        ],
                       ),
-                      5.horizontalSpace,
-                      Text(
-                        "4.5",
-                        style: TextStyle(
-                            fontSize: 10.sp,
-                            color: Colors.white,
-                            fontFamily: "Segoe UI, Bold"),
-                      ),
-                      5.horizontalSpace,
-                      Icon(
-                        Icons.star,
-                        color: Colors.white,
-                        size: 10,
-                      ),
+                      Container(
+                        width: 267.w,
+                        child: Text(
+                          "Lorem ipsum dolor sit amet consectetur, cursus adipiscing elit convallis.",
+                          style: TextStyle(
+                              fontSize: 13.sp,
+                              fontFamily: "Segoe UI, Regular",
+                              color: Colors.white),
+                        ),
+                      )
                     ],
                   ),
-                  Container(
-                    width: 267.w,
-                    child: Text(
-                      "Lorem ipsum dolor sit amet consectetur, cursus adipiscing elit convallis.",
-                      style: TextStyle(
-                          fontSize: 13.sp,
-                          fontFamily: "Segoe UI, Regular",
-                          color: Colors.white),
-                    ),
-                  )
                 ],
               ),
+              20.verticalSpace,
+              Container(
+                width: 378.w,
+                height: 1,
+                color: Colors.white.withOpacity(0.25),
+              )
             ],
           ),
-          20.verticalSpace,
-          Container(
-            width: 378.w,
-            height: 1,
-            color: Colors.white.withOpacity(0.25),
-          )
         ],
       ),
     );

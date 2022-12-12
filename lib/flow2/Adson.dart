@@ -21,11 +21,45 @@ class _addsonscreenState extends State<addsonscreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/backgroundedyble.jpg"),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+        floatingActionButton: Column(children: [
+          SizedBox(
+            height: Get.height * 0.85,
+          ),
+          Container(
+            width: 362.w,
+            height: 62.h,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(31.r),
+              boxShadow: [
+                BoxShadow(
+                  color: Color(0xff00FFA3),
+                  spreadRadius: 0,
+                  blurRadius: 6,
+                  offset: Offset(0, 1), // changes position of shadow
+                ),
+              ],
+            ),
+            child: FloatingActionButton.extended(
+              onPressed: () {
+                Get.to(() => myaccount());
+              },
+              label: Text(
+                'Select',
+                style: TextStyle(
+                    fontSize: 20.sp,
+                    color: Colors.black,
+                    fontFamily: "Sora, ExtraBold"),
+              ),
+              // icon: Icon(Icons.thumb_up),
+              backgroundColor: Color(0xffB6FF6F),
+            ),
+          ),
+        ]),
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           elevation: 0,
@@ -174,157 +208,150 @@ class _addsonscreenState extends State<addsonscreen> {
                   ),
                 ),
                 20.verticalSpace,
-                Stack(clipBehavior: Clip.none, children: [
-                  Container(
-                    width: 388.w,
-                    height: 386.h,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8.r),
-                      color: Color(0xff6d726b),
-                    ),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.symmetric(vertical: 10),
-                          child: Column(
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  80.horizontalSpace,
-                                  Text(
-                                    "BOOST YOUR POST",
-                                    style: TextStyle(
-                                        fontFamily: "Sora, Regular",
-                                        fontSize: 16.sp,
-                                        color: Colors.white),
-                                  ),
-                                  45.horizontalSpace,
-                                  Icon(
-                                    Icons.check_outlined,
-                                    color: Color(0xff6d726b),
-                                    size: 25,
-                                  )
-                                ],
-                              ),
-                              Text(
-                                "7 DAYS",
-                                style: TextStyle(
-                                    fontFamily: "Sora, Regular",
-                                    fontSize: 16.sp,
-                                    color: Colors.white),
-                              )
-                            ],
-                          ),
-                        ),
-                        10.verticalSpace,
-                        Container(
-                          width: 80.w,
-                          height: 1.h,
-                          color: Colors.white.withOpacity(0.5),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                Container(
+                  width: 388.w,
+                  height: 386.h,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.r),
+                    color: Color(0xff6d726b),
+                  ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
                           children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 15),
-                              child: Container(
-                                // width: .w,
-                                height: 50.h,
-                                child: Text(
-                                  "\$",
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                80.horizontalSpace,
+                                Text(
+                                  "BOOST YOUR POST",
                                   style: TextStyle(
-                                      fontSize: 33,
                                       fontFamily: "Sora, Regular",
+                                      fontSize: 16.sp,
                                       color: Colors.white),
                                 ),
-                              ),
+                                45.horizontalSpace,
+                                Icon(
+                                  Icons.check_outlined,
+                                  color: Color(0xff6d726b),
+                                  size: 25,
+                                )
+                              ],
                             ),
-                            Container(
-                              width: 170.w,
-                              height: 101.h,
-                              child: Text(
-                                "5.99",
-                                style: TextStyle(
-                                    fontSize: 80.sp,
-                                    color: Colors.white,
-                                    fontFamily: "Sora, Bold"),
-                              ),
-                            ),
+                            Text(
+                              "1 Month",
+                              style: TextStyle(
+                                  fontFamily: "Sora, Regular",
+                                  fontSize: 16.sp,
+                                  color: Colors.white),
+                            )
                           ],
-                        ),
-                        10.verticalSpace,
-                        Text(
-                          "Lorem ipsum dolor sit amet",
-                          style: TextStyle(
-                              fontSize: 18.sp,
-                              color: Colors.white,
-                              fontFamily: "Sora, Thin"),
-                        ),
-                        15.verticalSpace,
-                        Text(
-                          "Lorem ipsum dolor sit amet",
-                          style: TextStyle(
-                              fontSize: 18.sp,
-                              color: Colors.white,
-                              fontFamily: "Sora, Thin"),
-                        ),
-                        10.verticalSpace,
-                        Text(
-                          "Lorem ipsum dolor sit amet",
-                          style: TextStyle(
-                              fontSize: 18.sp,
-                              color: Colors.white,
-                              fontFamily: "Sora, Thin"),
-                        ),
-                        10.verticalSpace,
-                        Text(
-                          "Lorem ipsum dolor sit amet",
-                          style: TextStyle(
-                              fontSize: 18.sp,
-                              color: Colors.white,
-                              fontFamily: "Sora, Thin"),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Positioned(
-                    bottom: -25,
-                    left: 12,
-                    child: GestureDetector(
-                      onTap: () {
-                        Get.to(() => myaccount());
-                      },
-                      child: Container(
-                        width: 362.w,
-                        height: 62.h,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(31.r),
-                          color: Color(0xffB6FF6F),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color(0xff00FFA3),
-                              spreadRadius: 0,
-                              blurRadius: 6,
-                              offset:
-                                  Offset(0, 1), // changes position of shadow
-                            ),
-                          ],
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Select",
-                            style: TextStyle(
-                                fontSize: 20.sp,
-                                color: Colors.black,
-                                fontFamily: "Sora, ExtraBold"),
-                          ),
                         ),
                       ),
-                    ),
+                      10.verticalSpace,
+                      Container(
+                        width: 80.w,
+                        height: 1.h,
+                        color: Colors.white.withOpacity(0.5),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 15),
+                            child: Container(
+                              // width: .w,
+                              height: 50.h,
+                              child: Text(
+                                "\$",
+                                style: TextStyle(
+                                    fontSize: 33,
+                                    fontFamily: "Sora, Regular",
+                                    color: Colors.white),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: 230.w,
+                            height: 101.h,
+                            child: Text(
+                              "10.99",
+                              style: TextStyle(
+                                  fontSize: 80.sp,
+                                  color: Colors.white,
+                                  fontFamily: "Sora, Bold"),
+                            ),
+                          ),
+                        ],
+                      ),
+                      10.verticalSpace,
+                      Text(
+                        "Lorem ipsum dolor sit amet",
+                        style: TextStyle(
+                            fontSize: 18.sp,
+                            color: Colors.white,
+                            fontFamily: "Sora, Thin"),
+                      ),
+                      15.verticalSpace,
+                      Text(
+                        "Lorem ipsum dolor sit amet",
+                        style: TextStyle(
+                            fontSize: 18.sp,
+                            color: Colors.white,
+                            fontFamily: "Sora, Thin"),
+                      ),
+                      10.verticalSpace,
+                      Text(
+                        "Lorem ipsum dolor sit amet",
+                        style: TextStyle(
+                            fontSize: 18.sp,
+                            color: Colors.white,
+                            fontFamily: "Sora, Thin"),
+                      ),
+                      10.verticalSpace,
+                      Text(
+                        "Lorem ipsum dolor sit amet",
+                        style: TextStyle(
+                            fontSize: 18.sp,
+                            color: Colors.white,
+                            fontFamily: "Sora, Thin"),
+                      ),
+                    ],
                   ),
-                ]),
-                50.verticalSpace,
+                ),
+                // GestureDetector(
+                //   onTap: () {
+                //     Get.to(() => myaccount());
+                //   },
+                //   child: Container(
+                //     width: 362.w,
+                //     height: 62.h,
+                //     decoration: BoxDecoration(
+                //       borderRadius: BorderRadius.circular(31.r),
+                //       color: Color(0xffB6FF6F),
+                //       boxShadow: [
+                //         BoxShadow(
+                //           color: Color(0xff00FFA3),
+                //           spreadRadius: 0,
+                //           blurRadius: 6,
+                //           offset: Offset(0, 1), // changes position of shadow
+                //         ),
+                //       ],
+                //     ),
+                //     child: Center(
+                //       child: Text(
+                //         "Select",
+                //         style: TextStyle(
+                //             fontSize: 20.sp,
+                //             color: Colors.black,
+                //             fontFamily: "Sora, ExtraBold"),
+                //       ),
+                //     ),
+                //   ),
+                // ),
+                150.verticalSpace,
               ],
             ),
           ),

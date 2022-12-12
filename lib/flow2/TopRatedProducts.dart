@@ -33,8 +33,7 @@ class _TopRatedProductsState extends State<TopRatedProducts> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/backgroundedyble.jpg"),
+            image: AssetImage("assets/images/backgroundedyble.jpg"),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -79,6 +78,7 @@ class _TopRatedProductsState extends State<TopRatedProducts> {
                           },
                         ),
                       ),
+                      100.verticalSpace,
                     ],
                   ),
                 ),
